@@ -1,0 +1,15 @@
+FogRadar Android Studio project - GitHub Actions cloud build
+
+不需要在 Windows 安装 Android Studio、Java、Gradle 或 SDK。
+
+1. 打开 github.com，新建 PRIVATE（私有）仓库，例如 FogRadar-Android。
+2. 解压本压缩包，将其中的所有文件和目录放到仓库根目录（注意包括隐藏目录 .github/workflows）。
+   GitHub 网页 Upload files 支持选择工程文件；务必保留原有的子目录层级。
+   如果浏览器无法上传整个目录，可使用支持文件夹上传的浏览器，或先在网页上传工程树后单独创建 .github/workflows/build-apk.yml。
+3. 打开仓库 Actions -> Build FogRadar APK -> Run workflow -> Run workflow。
+4. 构建成功后进入对应运行记录 -> Artifacts -> FogRadar-debug-APK，下载并解压得到 app-debug.apk。
+5. 安装到安卓手机，先测试模拟模式，再测试LD2451连接。
+
+限制：本工程当前未在实际云端环境通过编译；LD2451的BLE特征与实时数据协议亦未通过实机验证。若 Actions 显示红色失败，复制失败步骤的日志交给助手修复。
+
+云端构建仍需要GitHub帐号和网络，但电脑不用配置任何开发工具。debug APK仅用于测试，不适合公开发布。
