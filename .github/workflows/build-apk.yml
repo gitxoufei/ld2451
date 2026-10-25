@@ -32,8 +32,6 @@ jobs:
         run: |
           set -e
           SDKMANAGER="$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager"
-          test -f "$SDKMANAGER"
-          chmod +x "$SDKMANAGER"
           "$SDKMANAGER" --version
           yes | "$SDKMANAGER" --licenses > /dev/null || true
           "$SDKMANAGER" --install "platforms;android-35" "build-tools;35.0.0"
