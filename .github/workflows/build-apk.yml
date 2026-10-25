@@ -45,7 +45,6 @@ jobs:
 
       - name: Build Debug APK
         run: |
-          sed -i '/^import android.app.Activity$/a import android.app.AlertDialog' app/src/main/java/top/xfwork/fogradar/MainActivity.kt
           gradle :app:assembleDebug --no-daemon --stacktrace
 
 
