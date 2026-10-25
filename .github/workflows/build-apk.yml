@@ -17,7 +17,7 @@ jobs:
 
       - name: Extract project ZIP
         run: |
-          unzip -oq FogRadar_GitHub_Cloud_Build_V2_1.zip -d .
+          unzip -oq FogRadar_GitHub_Cloud_Build_V2_2.zip -d .
           ls -la
           find app -maxdepth 3 -type f | head -30
 
